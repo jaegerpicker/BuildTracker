@@ -1,15 +1,5 @@
 {
     "name": "mean",
-<<<<<<< HEAD
-    "version": "0.1.0",
-    "dependencies": {
-        "bootstrap": "2.3.2",
-        "angular": "1.0.6",
-        "angular-resource": "1.0.6",
-        "angular-cookies": "1.0.6",
-        "angular-bootstrap": "0.6.0",
-        "angular-ui-utils": "0.0.4"
-=======
     "version": "0.1.3",
     "dependencies": {
         "angular": "latest",
@@ -20,6 +10,5 @@
         "bootstrap": "3.0.3",
         "angular-bootstrap": "0.10.0",
         "angular-ui-router": "#master"
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     }
 }

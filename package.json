@@ -1,17 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "express": "3.4.4",
-    "jade": "*"
-  }
-}
-=======
   "name": "mean",
   "description": "MEAN - A Modern Stack: MongoDB, ExpressJS, AngularJS, NodeJS. (BONUS: Passport User Support).",
   "version": "0.1.2",
@@ -94,4 +81,3 @@
     "karma-coverage": "~0.1.0"
   }
 }
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126

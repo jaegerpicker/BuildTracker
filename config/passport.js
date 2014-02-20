@@ -1,55 +1,32 @@
-<<<<<<< HEAD
-=======
 'use strict';
-
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
 var mongoose = require('mongoose'),
     LocalStrategy = require('passport-local').Strategy,
     TwitterStrategy = require('passport-twitter').Strategy,
     FacebookStrategy = require('passport-facebook').Strategy,
     GitHubStrategy = require('passport-github').Strategy,
     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
-<<<<<<< HEAD
-=======
     LinkedinStrategy = require('passport-linkedin').Strategy,
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     User = mongoose.model('User'),
     config = require('./config');
 
 
 module.exports = function(passport) {
-<<<<<<< HEAD
-    //Serialize sessions
-=======
-
     // Serialize the user id to push into the session
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     passport.serializeUser(function(user, done) {
         done(null, user.id);
     });
 
-<<<<<<< HEAD
-    passport.deserializeUser(function(id, done) {
-        User.findOne({
-            _id: id
-        }, function(err, user) {
-=======
     // Deserialize the user object based on a pre-serialized token
     // which is the user id
     passport.deserializeUser(function(id, done) {
         User.findOne({
             _id: id
         }, '-salt -hashed_password', function(err, user) {
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
             done(err, user);
         });
     });
 
-<<<<<<< HEAD
-    //Use local strategy
-=======
     // Use local strategy
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     passport.use(new LocalStrategy({
             usernameField: 'email',
             passwordField: 'password'
@@ -76,11 +53,7 @@ module.exports = function(passport) {
         }
     ));
 
-<<<<<<< HEAD
-    //Use twitter strategy
-=======
     // Use twitter strategy
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     passport.use(new TwitterStrategy({
             consumerKey: config.twitter.clientID,
             consumerSecret: config.twitter.clientSecret,

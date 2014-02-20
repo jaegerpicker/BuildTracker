@@ -1,6 +1,6 @@
 {
-    "db": "mongodb://localhost/mean-test",
-    "port": 3001,
+    "db": "mongodb://mongodb-codeart.cloudapp.net/mean-test",
+    "port": 27017,
     "app": {
         "name": "MEAN - A Modern Stack - Test"
     },

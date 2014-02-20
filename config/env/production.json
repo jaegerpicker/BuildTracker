@@ -1,5 +1,5 @@
 {
-    "db": "mongodb://localhost/mean",
+    "db": "mongodb://mongodb-codeart.cloudapp.net/mean",
     "app": {
         "name": "MEAN - A Modern Stack - Production"
     },

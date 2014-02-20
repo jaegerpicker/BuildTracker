@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=======
+
 'use strict';
 
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
 /**
  * Module dependencies.
  */
@@ -12,11 +11,8 @@ var mongoose = require('mongoose'),
 /**
  * Auth callback
  */
-<<<<<<< HEAD
-exports.authCallback = function(req, res, next) {
-=======
+
 exports.authCallback = function(req, res) {
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     res.redirect('/');
 };
 
@@ -58,22 +54,15 @@ exports.session = function(req, res) {
 /**
  * Create user
  */
-<<<<<<< HEAD
-exports.create = function(req, res) {
-    var user = new User(req.body);
-=======
+
 exports.create = function(req, res, next) {
     var user = new User(req.body);
     var message = null;
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
 
     user.provider = 'local';
     user.save(function(err) {
         if (err) {
-<<<<<<< HEAD
-            return res.render('users/signup', {
-                errors: err.errors,
-=======
             switch (err.code) {
                 case 11000:
                 case 11001:
@@ -85,7 +74,6 @@ exports.create = function(req, res, next) {
 
             return res.render('users/signup', {
                 message: message,
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
                 user: user
             });
         }
@@ -97,21 +85,6 @@ exports.create = function(req, res, next) {
 };
 
 /**
-<<<<<<< HEAD
- *  Show profile
- */
-exports.show = function(req, res) {
-    var user = req.profile;
-
-    res.render('users/show', {
-        title: user.name,
-        user: user
-    });
-};
-
-/**
-=======
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
  * Send User
  */
 exports.me = function(req, res) {

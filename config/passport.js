@@ -84,11 +84,9 @@ module.exports = function(passport) {
         }
     ));
 
-<<<<<<< HEAD
-    //Use facebook strategy
-=======
+
     // Use facebook strategy
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
     passport.use(new FacebookStrategy({
             clientID: config.facebook.clientID,
             clientSecret: config.facebook.clientSecret,
@@ -120,11 +118,9 @@ module.exports = function(passport) {
         }
     ));
 
-<<<<<<< HEAD
-    //Use github strategy
-=======
+
     // Use github strategy
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
     passport.use(new GitHubStrategy({
             clientID: config.github.clientID,
             clientSecret: config.github.clientSecret,
@@ -153,11 +149,9 @@ module.exports = function(passport) {
         }
     ));
 
-<<<<<<< HEAD
-    //Use google strategy
-=======
+
     // Use google strategy
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
     passport.use(new GoogleStrategy({
             clientID: config.google.clientID,
             clientSecret: config.google.clientSecret,
@@ -185,9 +179,6 @@ module.exports = function(passport) {
             });
         }
     ));
-<<<<<<< HEAD
-};
-=======
 
     // use linkedin strategy
     passport.use(new LinkedinStrategy({
@@ -218,4 +209,4 @@ module.exports = function(passport) {
         }
     ));
 };
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+

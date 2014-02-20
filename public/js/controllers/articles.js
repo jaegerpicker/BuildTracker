@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-angular.module('mean.articles').controller('ArticlesController', ['$scope', '$routeParams', '$location', 'Global', 'Articles', function ($scope, $routeParams, $location, Global, Articles) {
-=======
+
 'use strict';
 
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles', function ($scope, $stateParams, $location, Global, Articles) {
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     $scope.global = Global;
 
     $scope.create = function() {
@@ -13,23 +10,6 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
             content: this.content
         });
         article.$save(function(response) {
-<<<<<<< HEAD
-            $location.path("articles/" + response._id);
-        });
-
-        this.title = "";
-        this.content = "";
-    };
-
-    $scope.remove = function(article) {
-        article.$remove();  
-
-        for (var i in $scope.articles) {
-            if ($scope.articles[i] == article) {
-                $scope.articles.splice(i, 1);
-            }
-        }
-=======
             $location.path('articles/' + response._id);
         });
 
@@ -51,7 +31,6 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
             $scope.article.$remove();
             $location.path('articles');
         }
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     };
 
     $scope.update = function() {
@@ -74,11 +53,8 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
 
     $scope.findOne = function() {
         Articles.get({
-<<<<<<< HEAD
-            articleId: $routeParams.articleId
-=======
+
             articleId: $stateParams.articleId
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
         }, function(article) {
             $scope.article = article;
         });

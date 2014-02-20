@@ -1,30 +1,20 @@
-<<<<<<< HEAD
-=======
+
 'use strict';
 
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
 /**
  * Module dependencies.
  */
 var express = require('express'),
-<<<<<<< HEAD
-=======
+
     consolidate = require('consolidate'),
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
     mongoStore = require('connect-mongo')(express),
     flash = require('connect-flash'),
     helpers = require('view-helpers'),
     config = require('./config');
 
 module.exports = function(app, passport, db) {
-<<<<<<< HEAD
-    app.set('showStackError', true);    
-    
-    //Prettify HTML
-    app.locals.pretty = true;
 
-    //Should be placed before express.static
-=======
     app.set('showStackError', true);
 
     // Prettify HTML
@@ -34,71 +24,12 @@ module.exports = function(app, passport, db) {
 		
     // Should be placed before express.static
     // To ensure that all assets and data are compressed (utilize bandwidth)
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
     app.use(express.compress({
         filter: function(req, res) {
             return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
         },
-<<<<<<< HEAD
-        level: 9
-    }));
 
-    //Setting the fav icon and static folder
-    app.use(express.favicon());
-    app.use(express.static(config.root + '/public'));
-
-    //Don't use logger for test env
-    if (process.env.NODE_ENV !== 'test') {
-        app.use(express.logger('dev'));
-    }
-
-    //Set views path, template engine and default layout
-    app.set('views', config.root + '/app/views');
-    app.set('view engine', 'jade');
-
-    //Enable jsonp
-    app.enable("jsonp callback");
-
-    app.configure(function() {
-        //cookieParser should be above session
-        app.use(express.cookieParser());
-
-        //bodyParser should be above methodOverride
-        app.use(express.bodyParser());
-        app.use(express.methodOverride());
-
-        //express/mongo session storage
-        app.use(express.session({
-            secret: 'MEAN',
-            store: new mongoStore({
-                db: db.connection.db,
-                collection: 'sessions'
-            })
-        }));
-
-        //connect flash for flash messages
-        app.use(flash());
-
-        //dynamic helpers
-        app.use(helpers(config.app.name));
-
-        //use passport session
-        app.use(passport.initialize());
-        app.use(passport.session());
-
-        //routes should be at the last
-        app.use(app.router);
-
-        //Assume "not found" in the error msgs is a 404. this is somewhat silly, but valid, you can do whatever you like, set properties, use instanceof etc.
-        app.use(function(err, req, res, next) {
-            //Treat as 404
-            if (~err.message.indexOf('not found')) return next();
-
-            //Log it
-            console.error(err.stack);
-
-            //Error page
-=======
         // Levels are specified in a range of 0 to 9, where-as 0 is
         // no compression and 9 is best compression, but slowest
         level: 9
@@ -167,19 +98,17 @@ module.exports = function(app, passport, db) {
             console.error(err.stack);
 
             // Error page
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
             res.status(500).render('500', {
                 error: err.stack
             });
         });
 
-<<<<<<< HEAD
-        //Assume 404 since no middleware responded
-        app.use(function(req, res, next) {
-=======
+
+
         // Assume 404 since no middleware responded
         app.use(function(req, res) {
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
+
             res.status(404).render('404', {
                 url: req.originalUrl,
                 error: 'Not found'

@@ -1,10 +1,6 @@
 {
     "node": true, // Enable globals available when code is running inside of the NodeJS runtime environment.
     "browser": true, // Standard browser globals e.g. `window`, `document`.
-<<<<<<< HEAD
-    "es5": true, // Allow EcmaScript 5 syntax.
-=======
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     "esnext": true, // Allow ES.next specific features such as `const` and `let`.
     "bitwise": false, // Prohibit bitwise operators (&, |, ^, etc.).
     "camelcase": false, // Permit only camelcase for `var` and `object indexes`.
@@ -18,11 +14,7 @@
     "regexp": true, // Prohibit `.` and `[^...]` in regular expressions.
     "undef": true, // Require all non-global variables be declared before they are used.
     "unused": true, // Warn unused variables.
-<<<<<<< HEAD
-    "strict": false, // Require `use strict` pragma in every file.
-=======
     "strict": true, // Require `use strict` pragma in every file.
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     "trailing": true, // Prohibit trailing whitespaces.
     "smarttabs": false, // Suppresses warnings about mixed tabs and spaces
     "globals": { // Globals variables.
@@ -38,19 +30,11 @@
         "beforeEach",
         "after",
         "afterEach",
-<<<<<<< HEAD
-        "it"
-    ],
-    "indent": 4, // Specify indentation spacing
-    "maxlen": 120, // Max line lenght
-    "devel": false, // Allow development statements e.g. `console.log();`.
-=======
         "it",
         "inject",
         "expect"
     ],
     "indent": 4, // Specify indentation spacing
     "devel": true, // Allow development statements e.g. `console.log();`.
->>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
     "noempty": true // Prohibit use of empty blocks.
 }

@@ -1,20 +1,35 @@
+<<<<<<< HEAD
 <div class="navbar-inner" data-ng-controller="HeaderController">
     <ul class="nav">
         <li>
             <a class="brand" href="/">MEAN - A Modern Stack</a>
+=======
+<div class="" data-ng-controller="HeaderController">
+    <ul class="navbar-nav nav">
+        <li>
+            <a class="navbar-brand" href="/">MEAN - A Modern Stack</a>
+>>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
         </li>
         <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
             <a href="#!/{{item.link}}">{{item.title}}</a>
         </li>
     </ul>
+<<<<<<< HEAD
     <ul class="nav pull-right" data-ng-hide="global.authenticated">
+=======
+    <ul class="navbar-nav nav pull-right" data-ng-hide="global.authenticated">
+>>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
         <li><a href="signup">Signup</a>
         </li>
         <li class="divider-vertical"></li>
         <li><a href="signin">Signin</a>
         </li>
     </ul>
+<<<<<<< HEAD
     <ul class="nav pull-right" data-ng-show="global.authenticated">
+=======
+    <ul class="navbar-nav nav pull-right" data-ng-show="global.authenticated">
+>>>>>>> 1dc671047710e67e3fdf37de8b1fb25983069126
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				{{global.user.name}} <b class="caret"></b>
